@@ -5,19 +5,21 @@ import { IoSearchOutline } from "react-icons/io5";
 import { IoIosMic } from "react-icons/io";
 import { MdOutlineVideoCameraFront } from "react-icons/md";
 import { LuBell } from "react-icons/lu";
-
-
 import Youtube from "../../assets/youtube.png";
+import { useMenu } from "../../context/openMenu";
 
 export function Header(){
+    const { openMenu, setOpenMenu } = useMenu() 
+
     return(
         <Container>
             <LogoContainer>
                 <Button 
                     icon={HiBars3}
                     type="button"
+                    onClick={() => setOpenMenu(!openMenu)}
                 />
-                <img class="style-scope ytd-yoodle-renderer" src={Youtube} alt="Youtube"/>
+                <img src={Youtube} alt="Youtube"/>
             </LogoContainer>
 
             <SearchContainer>

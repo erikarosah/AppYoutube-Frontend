@@ -1,13 +1,17 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.header`
     width: 100%;
     height: 6rem;
 
     display: flex;
     justify-content: space-between;
-
-    padding: 1rem;
+    align-items: center;
+    padding: 0 2.5rem;
+    
+    position: fixed;
+    z-index: 1;
+    background-color: ${({theme}) => theme.COLORS.WHITE_100};
 `;
 
 export const LogoContainer = styled.div`
@@ -16,11 +20,13 @@ export const LogoContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+ 
     gap: 1rem;
 
     > img {
         width: 10rem;
         height: auto;
+        cursor: pointer;
     }
 `;
 
