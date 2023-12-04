@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+interface ContainerProps {
+    openmenu: boolean;
+}
+
+export const Container = styled.div<ContainerProps>`
     min-width: 25rem;
     height: 100vh;
     overflow: hidden;

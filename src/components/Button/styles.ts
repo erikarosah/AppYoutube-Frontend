@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const Container = styled.button`
+interface ContainerProps {
+    margin: string;
+}
+
+export const Container = styled.button<ContainerProps>`
     width: 3rem;
     height: 3rem;
 
@@ -17,5 +21,9 @@ export const Container = styled.button`
     
     &:hover{
         background-color: ${({theme}) => theme.COLORS.GRAY};
+    }
+
+    > svg {
+        font-size: 2rem;
     }
 `;

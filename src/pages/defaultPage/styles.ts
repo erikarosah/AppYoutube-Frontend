@@ -1,0 +1,12 @@
+import styled from "styled-components";
+
+export const Container = styled.div`
+    width: 100vw;
+    height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    
+    padding: 0 6rem;
+    gap: 1rem;
+`;

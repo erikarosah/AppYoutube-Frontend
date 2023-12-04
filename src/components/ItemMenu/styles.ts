@@ -2,13 +2,22 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     display: flex;
-    flex-direction: column;
     align-items: center;
+
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: .8rem;
+    font-size: 1.4rem;
+    margin-bottom: .5rem;
     cursor: pointer;
-    padding: .5rem;
-    border-radius: .5rem;
-    text-align: center;
+
+    transition: background-color .4s;
+
     &:hover{
         background-color: ${({theme}) => theme.COLORS.GRAY};
+    }
+
+    > svg {
+        font-size: 1.7rem;
     }
 `;

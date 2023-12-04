@@ -1,8 +1,20 @@
 import { createContext, useContext, useState } from "react";
 
-const MenuContext = createContext();
+interface MenuContextType {
+    openMenu: boolean;
+    setOpenMenu: (value: boolean) => void;
+}
+  
+interface MenuContextProps {
+    children: React.ReactNode;
+}
 
-function MenuContextProvider({children}){
+const MenuContext = createContext<MenuContextType>({
+    openMenu: false,
+    setOpenMenu: () => {},
+} as MenuContextType);
+
+function MenuContextProvider({children}: MenuContextProps){
     const [ openMenu, setOpenMenu ] = useState(false)
 
     return(
