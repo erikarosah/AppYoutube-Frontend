@@ -25,8 +25,7 @@ export const Container = styled.div<ContainerProps>`
  
     &:hover{
         overflow-y: auto;
-    }
-    
+    }    
 `;
 
 export const Content = styled.div`

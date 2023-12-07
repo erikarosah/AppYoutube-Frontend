@@ -2,11 +2,11 @@ import { Container, ChannelImage, ChannelInfos, Title, ChannelName, Views } from
 
 interface Props {
     bannerImg: string,
-    channelImg: string, 
+    channelImg?: string, 
     title: string, 
     channelName: string, 
-    views: string
-}
+    views?: string
+};
 
 export function CardVideo(props: Props){
     return(
@@ -21,7 +21,6 @@ export function CardVideo(props: Props){
                     <Views>{props.views}</Views>
                 </ChannelInfos>
             </main>
-
         </Container>
     )
 };

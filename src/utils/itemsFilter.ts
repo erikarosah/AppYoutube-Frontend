@@ -1,0 +1,20 @@
+export const ITEMS_FILTER = [
+    { name: "Tudo"},
+    { name: "Música"},
+    { name: "Mixes"},
+    { name: "Ao vivo"},
+    { name: "Jogos"},
+    { name: "Enviados recentemente"},
+    { name: "Animação"},
+    { name: "Rap"},
+    { name: "Aulas"},
+    { name: "Filmes de comédia"},
+    { name: "Música brasileira"},
+    { name: "Novidades"},
+    { name: "Carrossel"},
+    { name: "Filmes de comédia"},
+    { name: "Música brasileira"},
+    { name: "Novidades"},
+    { name: "Carrossel"},
+    { name: "Novidades para você"}
+];

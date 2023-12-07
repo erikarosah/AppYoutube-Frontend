@@ -1,27 +1,32 @@
 import { Container, Content } from "./styles";
-import { ItemMenu } from "../ItemMenu";
+
 import { FaAngleRight } from "react-icons/fa6";
+
+import { ItemMenu } from "../ItemMenu";
+import { useMenu } from "../../context/openMenu";
+
+import { Link } from "react-router-dom";
 
 import { 
     ITEMS_MENU_HEADER,
     ITEMS_MENU_YOUR,
-    ITEMS_MENU_EXPLORER
+    ITEMS_MENU_EXPLORER,
 } from "../../utils/itemsMenu";
-import { useMenu } from "../../context/openMenu";
 
 export function SideMenu(){
     const { openMenu } = useMenu() 
 
     return(
-        <Container openmenu={openMenu}>       
+        <Container openmenu={openMenu}>    
             <Content>
                 {
                     ITEMS_MENU_HEADER.map((item, index) => (
-                        <ItemMenu
-                            key={index}
-                            icon={item.icon}
-                            text={item.text}
-                        />
+                        <Link to={item.link} key={index}>
+                            <ItemMenu
+                                icon={item.icon}
+                                text={item.text}
+                            />
+                        </Link>
                     ))
                 }
             </Content>
@@ -29,11 +34,13 @@ export function SideMenu(){
                 <h3>Você <FaAngleRight/></h3>
                 {
                     ITEMS_MENU_YOUR.map((item, index) => (
-                        <ItemMenu
-                            key={index}
-                            icon={item.icon}
-                            text={item.text}
-                        />
+                        <Link to={item.link} key={index}>
+                            <ItemMenu
+                                icon={item.icon}
+                                text={item.text}
+                            />
+                        </Link>
+
                     ))
                 }
             </Content>
@@ -41,11 +48,12 @@ export function SideMenu(){
                 <h3>Explorar </h3>
                 {
                     ITEMS_MENU_EXPLORER.map((item, index) => (
-                        <ItemMenu
-                            key={index}
-                            icon={item.icon}
-                            text={item.text}
-                        />
+                        <Link to={item.link} key={index}>
+                            <ItemMenu
+                                icon={item.icon}
+                                text={item.text}
+                            />
+                        </Link>
                     ))
                 }
             </Content>

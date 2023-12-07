@@ -17,20 +17,20 @@ export const ITEMS_MENU_HEADER = [
     {icon: IoMdHome, text: "Início" , link: "/"},
     {icon: SiYoutubeshorts, text: "Shorts" , link: "/Shorts"},
     {icon: GoVideo, text: "Incrições" , link: "/Inscrições"},
-    {icon: IoPlayCircleOutline, text: "Youtube Music" , link: "/YoutubeMusic"}
+    {icon: IoPlayCircleOutline, text: "Youtube Music" , link: "/Youtube-Music"}
 ]
 
 const ITEMS_MENU_HEADER_EXTRA = [ 
-    {icon: MdAirplay, text: "Você", link: "/Você"},
+    {icon: MdAirplay, text: "Você", link: "/my-videos"},
     {icon: RiDownloadLine, text: "Downloads", link: "/Downloads"}
 ]
 
 export const ITEMS_MENU_YOUR = [
-    {icon: FaUser, text: "Seu canal" , link: ""},
-    {icon: MdHistory, text: "Histórico" , link: ""},
-    {icon: MdAirplay, text: "Seus Vídeos" , link: ""},
-    {icon: LuClock10, text: "Assistir mais tarde" , link: ""},
-    {icon: RiDownloadLine, text: "Downloads" , link: ""}
+    {icon: FaUser, text: "Seu canal" , link: "/my-videos"},
+    {icon: MdAirplay, text: "Enviar vídeo" , link: "/send-video"},
+    {icon: MdHistory, text: "Histórico" , link: "/Histórico"},
+    {icon: LuClock10, text: "Assistir mais tarde" , link: "Assistir-Depois"},
+    {icon: RiDownloadLine, text: "Downloads" , link: "/Downloads"}
 ]
 
 export const ITEMS_MENU_EXPLORER = [

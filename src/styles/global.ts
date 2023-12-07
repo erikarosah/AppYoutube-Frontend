@@ -17,24 +17,27 @@ const GlobalStyle = createGlobalStyle`
     cursor: pointer;
   } 
 
+  button {
+    border: none;
+  }
+
   a {
     text-decoration: none;
   }
 
-  *{
+  * {
     scrollbar-width: 10px;
     scrollbar-color: #8c8c8c;
   }
 
   *::-webkit-scrollbar{
       width: 8px;
-    }
+  }
     
   *::-webkit-scrollbar-thumb{
     background-color: #8c8c8c;
     border-radius: 20px;
   }
-  
 `;
  
 export default GlobalStyle;

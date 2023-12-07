@@ -6,7 +6,7 @@ interface Props {
     type: string,
     icon?: React.ComponentType,
     onClick?: React.MouseEventHandler<HTMLButtonElement>
-}
+};
 
 export function Button({ margin, text, type, icon:Icon, ...rest} : Props) {
     return(

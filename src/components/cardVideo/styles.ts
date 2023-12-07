@@ -41,7 +41,7 @@ export const ChannelInfos = styled.div`
 `;
 
 export const Title = styled.div`
-    width: 90%;
+    width: fit-content;
     display: block; 
     font-size: 1.4rem;
     font-weight: bold;
@@ -59,5 +59,10 @@ export const ChannelName = styled.h4`
 `;
 
 export const Views = styled.h4`
-    color: ${({theme}) => theme.COLORS.GRAY_100}
+    color: ${({theme}) => theme.COLORS.GRAY_100};
+    display: -webkit-box;
+    
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 `;
