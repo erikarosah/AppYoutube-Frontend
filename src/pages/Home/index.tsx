@@ -19,6 +19,7 @@ import { SiYoutubeshorts } from "react-icons/si";
 import { ITEMS_FILTER } from "../../utils/itemsFilter";
 import { ITEMS_SHORTS} from "../../utils/itemsShorts";
 import { ITEMS_VIDEOS } from "../../utils/itemsVideos";
+import { Footer } from "../../components/Footer";
 
 
 function Home() {
@@ -109,6 +110,7 @@ function Home() {
           </Shorts>
         </VideosContent>
       </Content>
+      <Footer/>
     </>
   );
 }

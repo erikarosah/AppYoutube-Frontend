@@ -16,7 +16,7 @@ export function DefaultPage(){
     const stringParams = JSON.stringify(params).replaceAll('{"*":"','').replaceAll('"}', '')
     
     const { openMenu } = useMenu()
-    
+
     return(
         <Container>
 

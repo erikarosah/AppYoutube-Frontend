@@ -70,6 +70,10 @@ export const SearchContainer = styled.div`
             background-color: ${({theme}) => theme.COLORS.GRAY};
         }
     }
+
+    @media(max-width: 600px){
+        display: none;
+    }
 `;
 
 export const ButtonsContainer = styled.div`
@@ -93,6 +97,19 @@ export const ButtonsContainer = styled.div`
             &:hover {
                 background-color: ${({theme}) => theme.COLORS.BLUE};
             }
+        }
+    }
+
+    > div button {
+        @media(max-width: 418px){
+            display: none;
+        }
+    }
+
+    > div button:last-child {
+        @media(max-width: 418px){
+            display: block;
+            background-color: ${({theme}) => theme.COLORS.GRAY};
         }
     }
 `;
@@ -119,6 +136,7 @@ export const Modal = styled.div<ContainerProps>`
     > div:first-child{
         display: flex;
         gap: 1rem;
+        justify-content: center;
     }
 
     > div div h2, h3, a{

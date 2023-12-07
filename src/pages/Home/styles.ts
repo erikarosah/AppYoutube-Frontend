@@ -11,6 +11,7 @@ interface ContainerPropsButtons {
 
 export const Content = styled.main` 
    width: 100%;
+   height: auto;
    display: flex;
    overflow: hidden;
    padding-bottom: 2rem;
@@ -38,6 +39,10 @@ export const Filter = styled.div`
    &::-webkit-scrollbar {
       display: none;
    }
+
+   @media(max-width: 600px){
+     display: none;
+   } 
 `;
 
 export const Controls = styled.div<ContainerProps>`
@@ -75,7 +80,7 @@ export const BtnLeft = styled.button<ContainerPropsButtons>`
 export const BtnRight = styled.button<ContainerPropsButtons>`
    position: absolute;
    top: 0;
-   right: 0;
+   right: 10px;
 
    visibility: ${({btnrightactive}) => btnrightactive? "visible"  : "hidden"};
 `;
@@ -99,6 +104,13 @@ export const VideosContent = styled.div<ContainerProps>`
 
    display: flex;
    flex-direction: column;
+
+   @media(max-width: 1024px){
+      width: 100vw;
+      padding: 0;
+      align-items: center;
+      transform: ${({openmenu}) => openmenu? "translateX(0)" : "translateX(0)"};
+   } 
 `;
 
 export const Videos = styled.div<ContainerProps>`
@@ -106,6 +118,32 @@ export const Videos = styled.div<ContainerProps>`
    display: grid;
    grid-template-columns: ${({openmenu}) => openmenu? "repeat(3, 1fr)" : "repeat(4, 1fr)"};
    gap: 2rem;
+
+   @media(max-width: 1024px){
+      width: 80vw;
+      display: grid;
+      grid-template-columns: ${({openmenu}) => openmenu? "repeat(3, 1fr)" : "repeat(3, 1fr)"};
+      gap: 0;
+      padding: 0 1rem;
+   } 
+
+   
+   @media(max-width: 834px){
+      width: 100%;
+   } 
+
+   @media(max-width: 800px){
+      padding: 0 .5rem;
+   } 
+
+   @media(max-width: 768px){
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     gap: 0 2rem;
+   } 
+
+
 `;
 
 export const Menu = styled.div`
@@ -118,6 +156,10 @@ export const Menu = styled.div`
    position: fixed;
    top: 6rem;
    bottom: 0;
+
+   @media(max-width: 1024px){
+      display: none;
+   }
 `;
 
 export const Shorts = styled.div<ContainerProps>`
@@ -129,6 +171,23 @@ export const Shorts = styled.div<ContainerProps>`
       width: ${({openmenu}) => openmenu? "90%" : "100%"}; 
       display: grid;
       grid-template-columns: ${({openmenu}) => openmenu? "repeat(5, 1fr)" : "repeat(6, 1fr)"};
-      row-gap: 4rem;
    }
+
+   @media(max-width: 1024px){
+      > h2{
+         padding-left: 5rem;
+      }
+
+      > div {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+
+         gap: 1rem;
+
+         > div{
+            margin-bottom: 2rem;
+         }
+      }
+   }  
 `;

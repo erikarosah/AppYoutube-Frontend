@@ -14,14 +14,14 @@ import {
 } from "../../utils/itemsMenu";
 
 export function SideMenu(){
-    const { openMenu } = useMenu() 
+    const { openMenu, setOpenMenu } = useMenu() 
 
     return(
         <Container openmenu={openMenu}>    
             <Content>
                 {
                     ITEMS_MENU_HEADER.map((item, index) => (
-                        <Link to={item.link} key={index}>
+                        <Link to={item.link} key={index} onClick={() => setOpenMenu(false)}>
                             <ItemMenu
                                 icon={item.icon}
                                 text={item.text}
@@ -34,7 +34,7 @@ export function SideMenu(){
                 <h3>Você <FaAngleRight/></h3>
                 {
                     ITEMS_MENU_YOUR.map((item, index) => (
-                        <Link to={item.link} key={index}>
+                        <Link to={item.link} key={index} onClick={() => setOpenMenu(false)}>
                             <ItemMenu
                                 icon={item.icon}
                                 text={item.text}
@@ -48,7 +48,7 @@ export function SideMenu(){
                 <h3>Explorar </h3>
                 {
                     ITEMS_MENU_EXPLORER.map((item, index) => (
-                        <Link to={item.link} key={index}>
+                        <Link to={item.link} key={index} onClick={() => setOpenMenu(false)}>
                             <ItemMenu
                                 icon={item.icon}
                                 text={item.text}
